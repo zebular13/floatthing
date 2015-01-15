@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Life Float Tank 1</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/website.css" rel="stylesheet" type="text/css" media="screen"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/simpletimer.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tinycolorpicker.js"></script>
+    <link href="css/jplayer.pink.flag.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jsjquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function()
+        {
+      var $box = $('#colorPicker');
+            $box.tinycolorpicker();
+            var box = $box.data("plugin_tinycolorpicker")
+
+            box.setColor("#ff0000");
+    });
+  </script>
+  <script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+  new jPlayerPlaylist({
+    jPlayer: "#jquery_jplayer_1",
+    cssSelectorAncestor: "#jp_container_1"
+  }, [
+    {
+      title:"AdrenalineRush",
+      type:"Isochronic",
+      mp3:"Music/AdrenalineRush.mp3",
+    },
+    {
+      title:"Christof",
+      artist:"Isochronic",
+      mp3:"Music/christof.mp3",
+    },
+    {
+      title:"Dreamy",
+      artist:"Isochronic",
+      mp3:"Music/Dreamy.mp3",
+    },
+    {
+      title:"Float",
+      artist:"Isochronic",
+      mp3:"Music/Float.mp3",
+    },
+
+  ], {
+    swfPath: "../../dist/jplayer",
+    supplied: "webmv, ogv, m4v, oga, mp3",
+    useStateClassSkin: true,
+    autoBlur: false,
+    smoothPlayBar: true,
+    keyEnabled: true,
+    audioFullScreen: true
+  });
+});
+//]]>
+</script>
+    <!-- Bootstrap -->
+
+
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 60px;
+      }
+      .enableTimer {
+        display:block;
+      }
+      .disableTimer {
+        display:none;
+      }
+      /* Custom container */
+      .customcontainer {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .customcontainer > hr {
+        margin: 60px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 80px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 100px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+
+      }
+    </style>
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">Life Float</a><a class="brand" href="index.html"> &laquo; Back</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+            </ul>
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" >
+       
+      <!-- Jumbotron -->
+      <div class="jumbotron" style="margin:0 auto;width:825px;margin-top:100px;">
+         <h2 >Tank 1</h2>
+         <ul class="unstyled"> 
+        <li style="float:left;width:430px;margin-top:-80px">
+            <div id="colorPicker">
+              <a class="color"><div class="colorInner">Select Color  &raquo;</div></a>
+              <div class="track"></div>
+              <ul class="dropdown"><li></li>
+              </ul>
+              <input type="hidden" class="colorInput"/></div></li>
+
+ 
+         <li  style="float:left;width:200px;"><button class="btn btn-large btn-success" href="#" style="float:center;" onclick="selectMusic()">Select Music &raquo;</button>
+          <div id="jp_container_0" style="display:none;">
+         <div id="jp_container_1" class="jp-video" role="application" aria-label="media player">
+  <div class="jp-type-playlist">
+    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+    <div class="jp-gui">
+      <div class="jp-video-play">
+        <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+      </div>
+      <div class="jp-interface">
+        <div class="jp-progress">
+          <div class="jp-seek-bar">
+            <div class="jp-play-bar"></div>
+          </div>
+        </div>
+        <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+        <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+        <div class="jp-details">
+          <div class="jp-title" aria-label="title">&nbsp;</div>
+        </div>
+        <div class="jp-controls-holder">
+          <div class="jp-volume-controls">
+            <button class="jp-mute" role="button" tabindex="0">mute</button>
+            <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+            <div class="jp-volume-bar">
+              <div class="jp-volume-bar-value"></div>
+            </div>
+          </div>
+          <div class="jp-controls">
+            <button class="jp-previous" role="button" tabindex="0">previous</button>
+            <button class="jp-play" role="button" tabindex="0">play</button>
+            <button class="jp-stop" role="button" tabindex="0">stop</button>
+            <button class="jp-next" role="button" tabindex="0">next</button>
+          </div>
+          <div class="jp-toggles">
+            <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+            <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+            <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jp-playlist">
+      <ul>
+        <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+        <li></li>
+      </ul>
+    </div>
+    <div class="jp-no-solution">
+      <span>Update Required</span>
+      To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+    </div>
+  </div>
+</div></div></li>
+
+
+
+
+
+       </ul>
+      </div>
+      </div>
+      <div class="jumbotron" style="width: 480px;margin: 0 auto;margin-top: 100px;">
+
+            <div id="counter" ><h1 id="timer" >60</h1><h3 id="minutesremaining">minutes remaining</h3></div>
+            <button onClick="startClock()" id="start-clock" class="btn btn-primary btn-large" style="float:left:padding:5px;width:200px">Start Float</button>
+            <button onClick="stopClock()" id="stop-clock" class="btn btn-primary btn-large" style="float:left:padding:5px;width:200px">End Float</button>
+      </div>
+
+      <hr>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Life Float 2015</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+ 
+
+
+  </body>
+
+  <script>
+
+var clicked = false;
+var sec = 60;
+
+function startClock() {
+  if (clicked === false) {
+    clock = setInterval("stopWatch()", 1000);
+    clicked = true;
+  }
+  else if (clicked === true) {
+  }
+}
+function stopWatch() {
+  sec--;
+  document.getElementById("timer").innerHTML = sec;
+}
+function stopClock() {
+  window.clearInterval(clock);
+  sec = 60;
+  document.getElementById("timer").innerHTML=60;
+  clicked = false;
+}
+
+
+function selectMusic() {
+
+  var el = document.getElementById('jp_container_0');
+
+  if ( el.style.display != 'none' ) {
+
+    el.style.display = 'none';
+
+  }
+
+  else {
+
+    el.style.display = '';
+
+  }
+
+}
+
+</script>
+</html>
